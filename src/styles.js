@@ -8,20 +8,7 @@ export const navStyles = {
 };
 
 export const blogStyles = {
-  preview: 'my-5 mx-0 py-2.5 px-4 border border-b-1 border-gray-100 hover:shadow-lg',
-  previewHeader: 'mb-2 text-xl text-pink-400 font-semibold',
+  button: 'bg-gray-50 border border-gray-300 hover:text-pink-400 rounded p-1',
+  preview: 'my-5 mx-0 py-2.5 px-4 hover:shadow-lg',
+  previewHeader: 'mb-2 text-xl text-pink-400 font-medium',
 };
-
-// .blog-preview {
-//   padding: 10px 16px;
-//   margin: 20px 0;
-//   border-bottom: 1px solid #fafafa;
-// }
-// .blog-preview:hover {
-//   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-// }
-// .blog-preview h2 {
-//   font-size: 20px;
-//   color: #f1356d;
-//   margin-bottom: 8px;
-// }
