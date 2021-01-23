@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import BlogList from './BlogList';
 import { blogStyles } from './styles';
 
@@ -9,10 +9,17 @@ const Home = () => {
     { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 },
   ]);
 
+  const [name, setName] = useState('mario');
+
   const handleDelete = (id) => {
     const newBlogs = blogs.filter((blog) => blog.id !== id);
     setBlogs(newBlogs);
   };
+
+  useEffect(() => {
+    console.log('useEffect just ran');
+    console.log(name);
+  }, [name]);
 
   return (
     <div className='home'>
@@ -22,6 +29,7 @@ const Home = () => {
         handleDelete={handleDelete}
         {...blogStyles}
       />
+      <button onClick={() => setName('luigi')}>Change Name</button>
     </div>
   );
 };
